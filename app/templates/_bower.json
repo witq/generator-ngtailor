@@ -1,23 +1,23 @@
 {
-	"name": "<%= _.slugify(_.humanize(name)) %>",
-	"version": "<%= version %>",
+	"name": "<%= _.slugify(_.humanize(settings.name)) %>",
+	"version": "<%= settings.version %>",
 	"dependencies": {
-		"angular": "<%= angular_version %>"<% if (i18nModule) { %>,
-		"angular-i18n": "<%= angular_version %>"<% } %><% if (touchModule) { %>,
-		"angular-touch": "<%= angular_version %>"<% } %><% if (animateModule) { %>,
-		"angular-animate": "<%= angular_version %>"<% } %><% if (routeModule) { %>,
-		"angular-route": "<%= angular_version %>"<% } %><% if (resourceModule) { %>,
-		"angular-resource": "<%= angular_version %>"<% } %><% if (sanitizeModule) { %>,
-		"angular-sanitize": "<%= angular_version %>"<% } %><% if (cookieModule) { %>,
-		"angular-cookies": "<%= angular_version %>"<% } %><% if (uiRouterModule) { %>,
-		"angular-ui-router": "0.2.10"<% } %><% if (translateModule) { %>,
-		"angular-translate": "2.1.0"<% } %><% if (snapModule) { %>,
-		"angular-snap": "1.4.1"<% } %><% if (carouselModule) { %>,
-		"angular-carousel": "0.2.2"<% } %><% if (bindonceModule) { %>,
+		"angular": "<%= settings.angularVersion %>"<% if (settings.i18nModule) { %>,
+		"angular-i18n": "<%= settings.angularVersion %>"<% } %><% if (settings.touchModule) { %>,
+		"angular-touch": "<%= settings.angularVersion %>"<% } %><% if (settings.animateModule) { %>,
+		"angular-animate": "<%= settings.angularVersion %>"<% } %><% if (settings.routeModule) { %>,
+		"angular-route": "<%= settings.angularVersion %>"<% } %><% if (settings.resourceModule) { %>,
+		"angular-resource": "<%= settings.angularVersion %>"<% } %><% if (settings.sanitizeModule) { %>,
+		"angular-sanitize": "<%= settings.angularVersion %>"<% } %><% if (settings.cookieModule) { %>,
+		"angular-cookies": "<%= settings.angularVersion %>"<% } %><% if (settings.uiRouterModule) { %>,
+		"angular-ui-router": "0.2.10"<% } %><% if (settings.translateModule) { %>,
+		"angular-translate": "2.1.0"<% } %><% if (settings.snapModule) { %>,
+		"angular-snap": "1.4.1"<% } %><% if (settings.carouselModule) { %>,
+		"angular-carousel": "0.2.2"<% } %><% if (settings.bindonceModule) { %>,
 		"angular-bindonce": "0.3.1"<% } %>
 	},
 	"devDependencies": {
-		<% if (unitTest) { %>"angular-mocks": "<%= angular_version %>"<% } %>
+		<% if (settings.unitTest) { %>"angular-mocks": "<%= config.angularVersion %>"<% } %>
 	}
 }
 

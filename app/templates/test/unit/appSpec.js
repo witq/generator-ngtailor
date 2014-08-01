@@ -1,19 +1,20 @@
-describe("<%= name %> application", function () {
+describe('<%= config.name %> application', function () {
 
-    var scope;
+  'use strict';
 
-    beforeEach(module('<%= name %>'));
+  var scope;
 
-    // Loads the controllers
-    beforeEach(inject(function ($controller, $rootScope) {
-        scope = $rootScope.$new();
-        $controller('mainController', {$scope: scope});
-    }));
+  beforeEach(module('<%= config.name %>'));
 
+  // Loads the controllers
+  beforeEach(inject(function ($controller, $rootScope) {
+    scope = $rootScope.$new();
+    $controller('AppController', {$scope: scope});
+  }));
 
-    it("should have a success message initialized", inject(function () {
-        expect(scope.message).toBeTruthy();
-        expect(scope.message).toBe('Yeahhh ! You\'re ready !');
-    }));
+  it('should have a success message initialized', inject(function () {
+    expect(scope.message).toBeTruthy();
+    expect(scope.message).toBe('Yeahhh! You\'re ready!');
+  }));
 
 });

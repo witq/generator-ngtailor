@@ -1,4 +1,4 @@
-<%= name %>
+<%= settings.name %>
 ==================
 
 ## Prerequisites

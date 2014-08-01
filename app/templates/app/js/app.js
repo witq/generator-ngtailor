@@ -1,11 +1,17 @@
-angular.module('<%= name %>', [<%= angularDeps %>]);
+(function() {
 
-<% if (angularProviders.length) {%>
+  'use strict';
 
-angular.module('<%= name %>').config(function(<%= angularProviders %>) {
+  angular.module('<%= config.name %>', [<%= angularDeps %>]);
 
-    "use strict";
+  <% if (angularProviders.length) {%>
 
-});
+  angular
+    .module('<%= config.name %>')
+    .config(function(<%= angularProviders %>) {
 
-<% } %>
+    });
+
+  <% } %>
+
+})();

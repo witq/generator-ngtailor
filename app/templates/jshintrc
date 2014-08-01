@@ -4,7 +4,7 @@
     "curly" : true,
     "eqeqeq" : true,
     "forin" : true,
-    "indent": 4,
+    "indent": 2,
     "immed" : true,
     "latedef" : true,
     "newcap" : true,
