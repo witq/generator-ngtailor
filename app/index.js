@@ -256,19 +256,9 @@
 
         this.prompt(prompts, function (props) {
 
-          this.settings.name = props.name;
-          this.settings.angularVersion = props.angularVersion;
-          this.settings.version = props.version;
-          this.settings.description = props.description;
-          this.settings.csslint = props.csslint;
-          this.settings.complexity = props.complexity;
-          this.settings.test = props.test;
-          this.settings.revision = props.revision;
-          this.settings.i18n = props.i18n;
-          this.settings.csspreprocessor = props.csspreprocessor;
-          this.settings.tests = props.tests;
-          this.settings.imagemin = props.imagemin;
-          this.settings.thirdModules = props.thirdModules;
+          _.each(this.settings, function (value, key) {
+            this.settings[key] = props[key] || this.settings.key;
+          }.bind(this));
 
           this._handleModules(props.modules, props.thirdModules);
           this._setUpTests();
